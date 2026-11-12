@@ -77,7 +77,7 @@ const App: React.FC = () => {
 
         <main className="flex-1 p-6 overflow-auto">
           <div className="h-full">
-            <moduleComponents[activeModule] />
+            {(() => { const Component = moduleComponents[activeModule]; return <Component />; })()}
           </div>
         </main>
       </div>
